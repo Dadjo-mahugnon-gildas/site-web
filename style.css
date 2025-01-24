@@ -150,3 +150,43 @@ a.btn:hover {
     background-color: #007bff;
     color: white;
 }
+
+
+/* Style général pour la section Teaching */
+section.teaching {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style des titres */
+h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Liste des expériences d'enseignement */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+/* Boutons pour les liens */
+a.btn {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a.btn:hover {
+    text-decoration: underline;
+}
