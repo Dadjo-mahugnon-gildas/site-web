@@ -1,14 +1,14 @@
-/* Style général */
+/* Style global */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #f5f5f5; /* Gris clair */
     margin: 0;
     padding: 0;
 }
 
 /* Barre de navigation */
 nav {
-    background-color: #333;
+    background-color: #333; /* Gris foncé */
     padding: 15px 0;
     text-align: center;
 }
@@ -25,51 +25,92 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     font-size: 18px;
+    padding: 10px 20px;
+    background: #007BFF; /* Bleu ciel */
+    border-radius: 5px;
+    transition: 0.3s;
 }
 
 nav ul li a:hover {
-    color: #00aced;
+    background: #FF0000; /* Rouge */
 }
 
-/* Section de contenu */
-section {
+/* Section hero */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: #ffffff;
+    border-bottom: 5px solid #007BFF;
+}
+
+.hero img {
+    width: 200px;
+    border-radius: 50%;
+    border: 5px solid #FF0000; /* Rouge */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero h1 {
+    color: #333;
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #555;
+}
+
+/* Contenu des sections */
+.content {
     max-width: 800px;
-    margin: 50px auto;
+    margin: 40px auto;
     padding: 20px;
-    background: white;
+    background: #ffffff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    border-left: 5px solid #007BFF; /* Bleu ciel */
 }
 
-h1 {
+h2 {
+    color: #007BFF; /* Bleu ciel */
     text-align: center;
-    color: #333;
-    font-size: 32px;
+    font-size: 28px;
 }
 
-/* Liste des formations */
+/* Boutons liens */
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #FF0000; /* Rouge */
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #007BFF; /* Bleu ciel */
+}
+
+/* Liste stylisée */
 ul {
     list-style-type: none;
     padding: 0;
 }
 
 ul li {
-    background: #00aced;
-    color: #fff;
+    background: #f1f1f1;
+    color: #333;
     margin: 15px 0;
     padding: 20px;
+    border-left: 5px solid #FF0000; /* Rouge */
     border-radius: 5px;
     font-size: 18px;
-    display: flex;
-    align-items: center;
-}
-
-ul li i {
-    margin-right: 10px;
-    font-size: 24px;
 }
 
 /* Pied de page */
@@ -78,7 +119,4 @@ footer {
     padding: 20px;
     background-color: #333;
     color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
 }
