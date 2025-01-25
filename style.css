@@ -1,116 +1,88 @@
 /* Style global */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5; /* Gris clair */
+    background-color: #f5f5f5;
     margin: 0;
     padding: 0;
 }
 
-/* Barre de navigation */
-nav {
-    background-color: #333; /* Gris foncé */
-    padding: 15px 0;
-    text-align: center;
+/* Navigation verticale sur le côté gauche */
+nav.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
 }
 
-nav ul {
+nav.sidebar ul {
     list-style: none;
-    margin: 0;
     padding: 0;
+    margin: 0;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
+nav.sidebar ul li {
+    border-bottom: 1px solid #555;
 }
 
-nav ul li a {
-    color: #ffffff;
+nav.sidebar ul li a {
+    display: block;
+    color: white;
     text-decoration: none;
-    font-size: 18px;
-    padding: 10px 20px;
-    background: #007BFF; /* Bleu ciel */
-    border-radius: 5px;
+    font-size: 20px;
+    padding: 15px 20px;
     transition: 0.3s;
 }
 
-nav ul li a:hover {
-    background: #808080; /* Gris */
+nav.sidebar ul li a:hover {
+    background: #007BFF;
 }
 
-/* Section hero */
-.hero {
-    text-align: center;
-    padding: 50px 20px;
-    background: #ffffff;
-    border-bottom: 5px solid #007BFF;
+/* Icônes dans la barre de navigation */
+nav.sidebar ul li a i {
+    margin-right: 10px;
 }
 
-.hero img {
-    width: 200px;
-    border-radius: 50%;
-    border: 5px solid #808080; /* Gris */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-}
-
-.hero h1 {
-    color: #333;
-    font-size: 36px;
-    margin-top: 20px;
-}
-
-.hero p {
-    font-size: 20px;
-    color: #555;
-}
-
-/* Contenu des sections */
+/* Ajustement du contenu pour ne pas être caché par la barre latérale */
 .content {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
+    margin-left: 260px;
+    padding: 40px;
     background: #ffffff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
     border-radius: 10px;
-    border-left: 5px solid #007BFF; /* Bleu ciel */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-    color: #007BFF; /* Bleu ciel */
+/* Titres et paragraphes */
+h1 {
+    color: #007BFF;
+    font-size: 36px;
     text-align: center;
-    font-size: 28px;
 }
 
-/* Boutons liens */
+p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Boutons stylisés */
 .btn {
     display: inline-block;
-    padding: 10px 15px;
-    background: #808080; /* Gris */
+    padding: 10px 20px;
+    background: #007BFF;
     color: white;
-    border-radius: 5px;
     text-decoration: none;
+    border-radius: 5px;
     font-weight: bold;
     transition: 0.3s;
 }
 
 .btn:hover {
-    background: #007BFF; /* Bleu ciel */
-}
-
-/* Liste stylisée */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    background: #f1f1f1;
-    color: #333;
-    margin: 15px 0;
-    padding: 20px;
-    border-left: 5px solid #808080; /* Gris */
-    border-radius: 5px;
-    font-size: 18px;
+    background: #0056b3;
 }
 
 /* Pied de page */
@@ -121,72 +93,27 @@ footer {
     color: white;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-}
+/* Responsive pour les petits écrans */
+@media screen and (max-width: 768px) {
+    nav.sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
 
-li {
-    margin-bottom: 20px;
-}
+    nav.sidebar ul li {
+        display: block;
+        text-align: center;
+        border-bottom: none;
+    }
 
-strong {
-    font-weight: bold;
-}
+    nav.sidebar ul li a {
+        font-size: 18px;
+        padding: 15px;
+    }
 
-em {
-    font-style: italic;
-}
-
-a.btn {
-    color: #007bff;
-    text-decoration: none;
-    border: 1px solid #007bff;
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-a.btn:hover {
-    background-color: #007bff;
-    color: white;
-}
-
-
-/* Style général pour la section Teaching */
-section.teaching {
-    margin: 20px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Style des titres */
-h2 {
-    font-size: 24px;
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/* Liste des expériences d'enseignement */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    margin-bottom: 15px;
-    font-size: 18px;
-}
-
-/* Boutons pour les liens */
-a.btn {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-a.btn:hover {
-    text-decoration: underline;
+    .content {
+        margin-left: 0;
+        padding: 20px;
+    }
 }
