@@ -255,3 +255,22 @@ section a.btn:hover {
 .btn:hover {
     background-color: #0056b3;
 }
+
+.math-actu {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;  /* Ajoute de l'espace autour du contenu */
+}
+
+.math-actu h2 {
+    margin: 0;  /* Supprime toute marge indésirable autour du titre */
+    padding: 0;  /* Supprime tout padding autour du titre */
+    white-space: nowrap;  /* Empêche le retour à la ligne du texte */
+}
+
+.math-actu h2 {
+    overflow: hidden;  /* Cache tout texte qui dépasse du conteneur */
+    text-overflow: ellipsis;  /* Utilise des points de suspension pour indiquer qu'il y a plus de texte */
+    white-space: nowrap;  /* Empêche le retour à la ligne du texte */
+}
