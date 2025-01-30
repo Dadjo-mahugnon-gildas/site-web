@@ -5,7 +5,6 @@ body {
     padding: 0;
     background-color: #f5f5f5;
     color: #333;
-    padding-top: 60px; /* Évite que la navbar cache le contenu */
 }
 
 /* Barre de navigation */
@@ -44,45 +43,53 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-/* Contenu principal */
-.main-content {
-    max-width: 900px;
-    margin: 60px auto;
+/* Conteneur principal */
+.container {
+    max-width: 1200px;
+    margin: 80px auto 20px; /* Ajout d'une marge en haut pour éviter que le contenu soit caché sous la navbar */
     padding: 20px;
-    background: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
 }
 
-.main-content h1 {
+/* Contenu principal */
+.content {
+    display: block; /* Supprime tout effet de colonne */
+    margin: 0 auto; /* Centre le contenu */
+    padding: 20px;
+}
+
+/* Enlever toute bordure gauche éventuelle sur les sections */
+section {
+    border-left: none !important;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+/* Style des titres */
+h1 {
     color: #007BFF;
     font-size: 32px;
 }
 
-.main-content h2 {
-    color: #333;
+h2 {
+    color: #444;
     font-size: 28px;
 }
 
-.main-content p {
+/* Style des paragraphes */
+p {
     font-size: 18px;
     line-height: 1.6;
 }
 
-/* Style de l'image de profil */
-.profile-pic {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.profile-pic img {
-    max-width: 150px;
-    border-radius: 50%;
+/* Image de présentation */
+img {
+    max-width: 100%;
+    height: auto;
     display: block;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
-/* Footer */
+/* Pied de page */
 footer {
     background-color: #333;
     color: white;
