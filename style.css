@@ -167,3 +167,39 @@ footer {
 .presentations a.btn:hover {
     background-color: #0056b3; 
 }
+
+/* Ajoutez ces styles pour assurer l'uniformité entre les sections Publications et Presentations */
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: left; /* Aligner à gauche pour les deux sections */
+    word-wrap: break-word;
+}
+
+section ul {
+    list-style: none;  
+    padding: 0;
+}
+
+section li {
+    margin-bottom: 15px; 
+    font-size: 1.2rem; /* Taille de texte uniforme pour les deux sections */
+}
+
+section a.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007BFF; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 5px; /* Espace entre le texte et le bouton */
+}
+
+section a.btn:hover {
+    background-color: #0056b3; 
+}
+
+.presentations ul li {
+    margin-bottom: 15px;
+}
