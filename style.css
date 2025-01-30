@@ -118,3 +118,15 @@ footer {
 .project-card:hover {
     transform: scale(1.05);
 }
+
+.hero {
+    text-align: center; /* Centrer le texte et l'image */
+    padding: 20px;
+}
+
+.hero img {
+    max-width: 50%; /* Ajuster la largeur de l'image selon vos besoins */
+    height: auto; /* Garder les proportions de l'image */
+    display: block; /* Pour que l'image soit un bloc */
+    margin: 0 auto; /* Centrer l'image horizontalement */
+}
