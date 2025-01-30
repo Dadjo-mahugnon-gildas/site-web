@@ -203,3 +203,55 @@ section a.btn:hover {
 .presentations ul li {
     margin-bottom: 15px;
 }
+
+.mathactu h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: left; /* Aligner à gauche */
+    border-bottom: 3px solid #007BFF; /* Ligne de séparation sous le titre */
+    padding-bottom: 5px;
+}
+
+.article {
+    background: #f9f9f9; /* Couleur de fond pour chaque article */
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 5px solid #007BFF; /* Bordure colorée pour bien différencier */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.article h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.article p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.article a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.article a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
