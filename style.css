@@ -137,3 +137,33 @@ footer {
     border-radius: 30%; /* Cela crée l'effet de cercle */
     object-fit: cover; /* Assure que l'image s'adapte bien au cercle */
 }
+
+/* Ajoutez ces styles à votre fichier CSS */
+.presentations h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: left; /* Aligner à gauche */
+    word-wrap: break-word;
+}
+
+.presentations ul {
+    list-style: none;  
+    padding: 0;
+}
+
+.presentations li {
+    margin-bottom: 15px; 
+}
+
+.presentations a.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007BFF; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.presentations a.btn:hover {
+    background-color: #0056b3; 
+}
