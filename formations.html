@@ -43,7 +43,7 @@
             margin: 20px;
         }
 
-        section h1 {
+        section h2 {
             font-size: 2rem;
             margin-bottom: 20px;
             text-align: center;
@@ -66,6 +66,28 @@
             background-color: #333;
             color: white;
         }
+
+        .formations ul {
+            list-style: none;  
+            padding: 0;
+        }
+
+        .formations li {
+            margin-bottom: 15px; 
+        }
+
+        .formations a.btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #007BFF; 
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .formations a.btn:hover {
+            background-color: #0056b3; 
+        }
     </style>
 </head>
 <body>
@@ -73,19 +95,25 @@
         <nav>
             <ul>
                 <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
-                <li><a href="formations.html"><i class="fa-solid fa-user-graduate"></i> Formations</a></li>
+                <li class="active"><a href="formations.html"><i class="fa-solid fa-user-graduate"></i> Formations</a></li>
                 <li><a href="publications.html"><i class="fa-solid fa-book"></i> Publications</a></li>
                 <li><a href="teaching.html"><i class="fa-solid fa-chalkboard-teacher"></i> Teaching</a></li>
             </ul>
         </nav>
     </header>
 
-    <section>
-        <h1><i class="fa-solid fa-graduation-cap"></i> Formations</h1>
+    <section class="formations">
+        <h2>Formations</h2>
         <ul>
-            <li><i class="fa-solid fa-university"></i> <strong>PhD candidate in Applied Mathematics</strong> - Université de Montpellier (France) (since 2022)</li>
-            <li><i class="fa-solid fa-university"></i> <strong>M. Sc in Applied Mathematics</strong> - Sorbonne Université (Paris VI, France) (2021 - 2022)</li>
-            <li><i class="fa-solid fa-university"></i> <strong>M. Sc in Fundamental Mathematics</strong> - IMSP (UAC, Bénin) (2018 - 2020)</li>
+            <li>
+                <strong>PhD candidate in Applied Mathematics</strong> - Université de Montpellier (France) (since 2022)
+            </li>
+            <li>
+                <strong>M. Sc in Applied Mathematics</strong> - Sorbonne Université (Paris VI, France) (2021 - 2022)
+            </li>
+            <li>
+                <strong>M. Sc in Fundamental Mathematics</strong> - IMSP (UAC, Bénin) (2018 - 2020)
+            </li>
         </ul>
     </section>
 
