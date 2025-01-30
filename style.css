@@ -125,8 +125,15 @@ footer {
 }
 
 .hero img {
-    max-width: 50%; /* Ajuster la largeur de l'image selon vos besoins */
+    max-width: 30%; /* Ajuster la largeur de l'image selon vos besoins */
     height: auto; /* Garder les proportions de l'image */
     display: block; /* Pour que l'image soit un bloc */
     margin: 0 auto; /* Centrer l'image horizontalement */
+}
+
+.hero img {
+    width: 90px;  /* Ajustez la taille de l'image si nécessaire */
+    height: 120px; /* Assurez-vous que la largeur et la hauteur soient égales */
+    border-radius: 30%; /* Cela crée l'effet de cercle */
+    object-fit: cover; /* Assure que l'image s'adapte bien au cercle */
 }
