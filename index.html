@@ -1,48 +1,48 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Mahugnon Gildas Dadjo</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <meta name="google-site-verification" content="wbaWGRy5_T2wF3HPnrD9JYs_BQZUGtkifSMDO1-Ti58" />
-
-</head>
 <body>
     <header>
         <nav>
             <ul>
                 <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
                 <li><a href="formations.html"><i class="fa-solid fa-user-graduate"></i> Formations</a></li>
-                <li><a href="publications.html"><i class="fa-solid fa-book"></i> Publications</a></li> <!-- Nouveau lien -->
+                <li><a href="publications.html"><i class="fa-solid fa-book"></i> Publications</a></li>
                 <li><a href="teaching.html"><i class="fa-solid fa-chalkboard-teacher"></i> Teaching</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero">
-        <h1>Un do gbe nu mi ɖo wema ce ji 😅</h1>
-        <img src="images/im1.jpg" alt="Photo de Mahugnon Gildas Dadjo">
-        <h2>Mahugnon Gildas Dadjo</h2>
-        <p>PhD candidate in Applied Mathematics at Université de Montpellier, France.</p>
-        <p>
-            I received my B.Sc degree from the Mathematics Department at the Université d'Abomey-Calavi (Benin). 
-            I obtained an M. Sc. degree in Pure Mathematics at the Institut de Mathématiques et de Sciences Physiques (Benin) 
-            and an M. Sc. degree in Mathematics and Modeling at the Sorbonne Université (Paris). 
-            I started my PhD degree in September 2022. My work aims to develop control methods to pilot an original system of 
-            three interconnected bioreactors to reuse wastewater in agriculture. More particularly, it is a problem called 
-            "setpoint tracking", such "setpoint" being the result of the resolution of an optimal control problem solved using 
-            a crop irrigation model. However, optimal solutions should be expressed as feedback that depends on the nitrogen in 
-            the soil, which a priori is not available. Another difficulty is related to the various uncertainties in the model 
-            parameters. We propose to bring concrete answers to these challenges by designing the so-called "adaptive observer" 
-            for the joint estimation of nitrogen and uncertain parameters.
-        </p>
-    </section>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <ul>
+                <li><a href="#section1">Introduction</a></li>
+                <li><a href="#section2">Setpoint Tracking</a></li>
+                <li><a href="#section3">Adaptive Observer</a></li>
+                <li><a href="#section4">Uncertainty Challenges</a></li>
+            </ul>
+        </aside>
 
-    
+        <!-- Main Content -->
+        <section class="content">
+            <h1>Un do gbe nu mi ɖo wema ce ji 😅</h1>
+            <img src="images/im1.jpg" alt="Photo de Mahugnon Gildas Dadjo">
+            <h2>Mahugnon Gildas Dadjo</h2>
+            <p>PhD candidate in Applied Mathematics at Université de Montpellier, France.</p>
+            
+            <h3 id="section1">Introduction</h3>
+            <p>I received my B.Sc degree from the Mathematics Department at the Université d'Abomey-Calavi (Benin)...</p>
+
+            <h3 id="section2">Setpoint Tracking</h3>
+            <p>My work aims to develop control methods to pilot an original system...</p>
+
+            <h3 id="section3">Adaptive Observer</h3>
+            <p>We propose to bring concrete answers to these challenges...</p>
+
+            <h3 id="section4">Uncertainty Challenges</h3>
+            <p>Another difficulty is related to the various uncertainties in the model parameters...</p>
+        </section>
+    </div>
+
     <footer>
         <p>&copy; 2025 Mahugnon Gildas Dadjo - All rights reserved</p>
     </footer>
 </body>
-</html>
