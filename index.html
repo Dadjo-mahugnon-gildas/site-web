@@ -9,21 +9,49 @@
     <meta name="google-site-verification" content="wbaWGRy5_T2wF3HPnrD9JYs_BQZUGtkifSMDO1-Ti58" />
 
     <style>
-        /* Ajoutez des styles pour centrer l'image, le nom, et ajouter des marges */
+        /* Centrer le contenu de la page */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; /* Couleur de fond pour plus de contraste */
+        }
+
+        /* Conteneur principal */
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
         .hero {
             text-align: center;
             padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        
+        .hero img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            margin-top: 20px;
+        }
 
         .contact-info {
             text-align: center;
             margin-top: 30px;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .contact-info p {
             font-size: 16px;
+            line-height: 1.6;
         }
 
         .contact-info a {
@@ -34,65 +62,86 @@
         .contact-info a:hover {
             text-decoration: underline;
         }
+
+        /* Formations */
+        .formations h2 {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .formations ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        .formations li {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #222;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <nav>
+    <div class="container">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="formations.html"><i class="fa-solid fa-user-graduate"></i> Formations</a></li>
+                    <li><a href="publications.html"><i class="fa-solid fa-book"></i> Publications</a></li>
+                    <li><a href="teaching.html"><i class="fa-solid fa-chalkboard-teacher"></i> Teaching</a></li>
+                    <li><a href="math-actu.html"><i class="fa-solid fa-newspaper"></i> Math'Actu</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <h1>Un do gbe nu mi ɖo wema ce ji 😅</h1>
+            <img src="images/im1.jpg" alt="Photo de Mahugnon Gildas Dadjo">
+            <p>M. Gildas Dadjo, Ph.D candidate in Applied Mathematics </p>
+            <p>
+                I started my PhD degree in September 2022. My work aims to develop control methods to pilot an original system of 
+                three interconnected bioreactors to reuse wastewater in agriculture. More particularly, it is a problem called 
+                "setpoint tracking", such "setpoint" being the result of the resolution of an optimal control problem solved using 
+                a crop irrigation model. However, optimal solutions should be expressed as feedback that depends on the nitrogen in 
+                the soil, which a priori is not available. Another difficulty is related to the various uncertainties in the model 
+                parameters. We propose to bring concrete answers to these challenges by designing the so-called "adaptive observer" 
+                for the joint estimation of nitrogen and uncertain parameters.
+            </p>
+        </section>
+
+        <section class="formations">
+            <h2>Formations</h2>
             <ul>
-                <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
-                <li><a href="formations.html"><i class="fa-solid fa-user-graduate"></i> Formations</a></li>
-                <li><a href="publications.html"><i class="fa-solid fa-book"></i> Publications</a></li>
-                <li><a href="teaching.html"><i class="fa-solid fa-chalkboard-teacher"></i> Teaching</a></li>
-                <li><a href="math-actu.html"><i class="fa-solid fa-newspaper"></i> Math'Actu</a></li>
+                <li>
+                    <strong>PhD candidate in Applied Mathematics</strong> - Université de Montpellier (France) (since 2022)
+                </li>
+                <li>
+                    <strong>M. Sc in Applied Mathematics</strong> - Sorbonne Université (Paris VI, France) (2021 - 2022)
+                </li>
+                <li>
+                    <strong>M. Sc in Fundamental Mathematics</strong> - IMSP (UAC, Bénin) (2018 - 2020)
+                </li>
             </ul>
-        </nav>
-    </header>
+        </section>
 
-    
-    
+        <section class="contact-info">
+            <p><strong>Work address :</strong><br>2 PL Viala, 34060, Montpellier, France</p>
+            <p><strong>Contact :</strong><br>Email: <a href="mailto:mahugnon.dadjo@inrae.fr">mahugnon.dadjo@inrae.fr</a></p>
+            <p><strong>LinkedIn :</strong><br><a href="https://www.linkedin.com/in/mahugnon-gildas-dadjo-014a0a168?originalSubdomain=fr" target="_blank">mahugnon-gildas-dadjo</a></p>
+        </section>
 
-    <section class="hero">
-        <h1>Un do gbe nu mi ɖo wema ce ji 😅</h1>
-        <img src="images/im1.jpg" alt="Photo de Mahugnon Gildas Dadjo">
-        <p>M. Gildas Dadjo, Ph.D candidate in Applied Mathematics </p>
-        <p>
-            
-            I started my PhD degree in September 2022. My work aims to develop control methods to pilot an original system of 
-            three interconnected bioreactors to reuse wastewater in agriculture. More particularly, it is a problem called 
-            "setpoint tracking", such "setpoint" being the result of the resolution of an optimal control problem solved using 
-            a crop irrigation model. However, optimal solutions should be expressed as feedback that depends on the nitrogen in 
-            the soil, which a priori is not available. Another difficulty is related to the various uncertainties in the model 
-            parameters. We propose to bring concrete answers to these challenges by designing the so-called "adaptive observer" 
-            for the joint estimation of nitrogen and uncertain parameters.
-        </p>
-    </section>
-
-    <section class="formations">
-        <h2>Formations</h2>
-        <ul>
-            <li>
-                <strong>PhD candidate in Applied Mathematics</strong> - Université de Montpellier (France) (since 2022)
-            </li>
-            <li>
-                <strong>M. Sc in Applied Mathematics</strong> - Sorbonne Université (Paris VI, France) (2021 - 2022)
-            </li>
-            <li>
-                <strong>M. Sc in Fundamental Mathematics</strong> - IMSP (UAC, Bénin) (2018 - 2020)
-            </li>
-        </ul>
-    </section>
-
-    <section class="contact-info">
-        <p><strong>Work address :</strong><br>2 PL Viala, 34060, Montpellier, France</p>
-        <p><strong>Contact :</strong><br>Email: <a href="mailto:mahugnon.dadjo@inrae.fr">mahugnon.dadjo@inrae.fr</a></p>
-        <p><strong>LinkedIn :</strong><br><a href="https://www.linkedin.com/in/mahugnon-gildas-dadjo-014a0a168?originalSubdomain=fr" target="_blank">mahugnon-gildas-dadjo</a></p>
-    </section>
-
-   
-
-    <footer>
-        <p>&copy; 2025 Mahugnon Gildas Dadjo - All rights reserved</p>
-    </footer>
+        <footer>
+            <p>&copy; 2025 Mahugnon Gildas Dadjo - All rights reserved</p>
+        </footer>
+    </div>
 </body>
 </html>
