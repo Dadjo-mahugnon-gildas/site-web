@@ -1,267 +1,254 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Mahugnon Gildas Dadjo</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <meta name="google-site-verification" content="wbaWGRy5_T2wF3HPnrD9JYs_BQZUGtkifSMDO1-Ti58" />
-
+    <title>Mahugnon Gildas Dadjo</title>
+    <link rel="stylesheet" href="jemdoc.css">
     <style>
-        /* Centrer le contenu de la page */
         body {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
         }
-
-        /* Conteneur principal */
-        .container {
-            max-width: 1200px;
-            width: 100%;
+        .sidebar {
+            width: 200px;
+            background-color: #f0f0f0;
             padding: 20px;
-            box-sizing: border-box;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
         }
-
-        .hero {
-            text-align: center;
+        .content {
+            margin-left: 220px;
             padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
+            flex: 1;
         }
-
-        /* Réduire la taille de l'image */
-        .hero img {
-            width: 40%;
-            max-width: 100px; /* Limite la largeur de l'image à 400px */
-            height: auto;
-            margin-top: 10px;
-        }
-
-        .contact-info {
-            text-align: center;
-            margin-top: 30px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .contact-info p {
-            font-size: 16px;
-            line-height: 1.6;
-        }
-
-        .contact-info a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-
-        /* Formations */
-        .formations h2 {
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        .formations ul {
-            list-style-type: none;
-            padding: 0;
-            text-align: center;
-        }
-
-        .formations li {
-            font-size: 18px;
+        .sidebar a {
+            display: block;
             margin: 10px 0;
+            text-decoration: none;
+            color: #0073e6;
+            font-weight: bold;
+            cursor: pointer;
         }
-
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            background-color: #222;
-            color: #fff;
+        h1, h2, h3 {
+            color: #003399;
         }
-
-        p {
-    text-align: justify; /* Justifie le texte */
-    line-height: 1.6; /* Augmente l'interligne pour une meilleure lisibilité */
-    margin: 0 auto; /* Centre le texte si nécessaire */
-    padding: 10px; /* Ajoute un peu de padding pour que le texte ne soit pas trop collé aux bords */
-    width: 90%; /* Définit la largeur du paragraphe */
-}
-
-.name-container {
-    margin-top: 10px;
-}
-
-.name-container p {
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center; /* Centrer le texte sous l'image */
-    margin: 0;
-}
-
+        .profile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .profile img {
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+        /* Hide sections initially */
+        .section {
+            display: none;
+        }
     </style>
+    <script>
+        // Function to switch between sections
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.style.display = 'none');
+
+            // Show the clicked section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+        
+        // Display the biography section by default when the page loads
+        window.onload = function() {
+            showSection('biography');
+        };
+    </script>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
-                    <li><a href="math-actu.html"><i class="fa-solid fa-newspaper"></i> Math'Actu</a></li>
-                </ul>
-            </nav>
-        </header>
 
-        <section class="hero">
-            <h1>Un do gbe nu mi ɖo wema ce ji 😅</h1>
-            <img src="images/im1.jpg" alt="Photo de Mahugnon Gildas Dadjo">
-            <div class="name-container">
-                <p>Mahugnon Gildas Dadjo</p>
+<div class="sidebar">
+    <h2>Links</h2>
+    <a onclick="showSection('biography')">Biography</a>
+    <a onclick="showSection('publications')">Publications</a>
+    <a onclick="showSection('thesis')">Ph.D. Thesis</a>
+    <a onclick="showSection('education')">Education</a>
+    <a onclick="showSection('interests')">Research Interests</a>
+    <a onclick="showSection('experience')">Work Experience</a>
+    <a onclick="showSection('skills')">Computer Skills</a>
+    <a onclick="showSection('teaching')">Teaching</a>
+    <a onclick="showSection('collaborators')">Selected Collaborators</a>
+    <a onclick="showSection('contact')">Contact</a>
+</div>
+
+<div class="content">
+    <!-- Biography Section -->
+    <div id="biography" class="section">
+        <div class="profile">
+            <img src="images/im1.jpg" alt="Photo de Mahugnon" width="200px" />
+            <div>
+                <h1>Mahugnon Gildas Dadjo, Ph.D. candidate</h1>
+                <p>
+                    Postdoctoral Associate at Informatics Institute, University of Florida <br>
+                    Former advisor: Professor Jinglai Shen <br>
+                    <a href="https://scholar.google.com">Google Scholar</a>, <a href="ahmad_CV.pdf">Curriculum Vitae</a> <br>
+                    Contact: <a href="mailto:youremail@example.com">email</a>, <a href="https://www.linkedin.com/in/yourprofile">LinkedIn</a>
+                </p>
             </div>
+        </div>
+    </div>
 
-        </section>
-
-        <section class="Educations">
-            <h2> </h2>
-            <ul>
-                I started my Ph.D degree in September 2022. My work aims to develop control methods to pilot an original system of 
-                three interconnected bioreactors to reuse wastewater in agriculture. More particularly, it is a problem called 
-                "setpoint tracking", such "setpoint" being the result of the  resolution of an optimal control problem solved using 
-                a crop irrigation model. However, optimal solutions should be expressed as feedback that depends on the nitrogen in 
-                the soil, which a priori is not available. Another difficulty is related to the various uncertainties in the model 
-                parameters. We propose to bring concrete answers to these challenges by designing the so-called "adaptive observer" 
-                for the joint estimation of nitrogen and uncertain parameters.
-            </ul>
-        </section>
-
-        <section class="Educations">
-            <h2>Educations</h2>
-            <ul>
-                <li>
-                 <strong>PhD candidate in Applied Mathematics</strong> - Université de Montpellier (France) (since 2022)
-                </li>
-                <li>
-                    <strong>M. Sc in Applied Mathematics</strong> - Sorbonne Université (Paris VI, France) (2021 - 2022)
-                </li>
-                <li>
-                    <strong>M. Sc in Fundamental Mathematics</strong> - IMSP (UAC, Bénin) (2018 - 2020)
-                </li>
-            </ul>
-        </section>
-
-       
-
-       
-    <section class="content">
+    <!-- Publications Section -->
+    <div id="publications" class="section">
         <h2>Publications</h2>
         <ul>
             <li>
-                <strong>Dadjo, M.G., Rapaport, A., Harmand, J., Ushirobira, R., Efimov, D. (2025).</strong>
-                <em>A robust adaptive observer for a class of nonlinear time-varying systems with application to a crop fertigation model</em><br>
-                <span><i>Submitted.</i></span>
+                <strong><a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/itor.13123" target="_blank">
+                A penalty decomposition algorithm with greedy improvement for mean-reverting portfolios with sparsity and volatility constraints</a></strong> <br>
+                A. Mousavi, J. Shen <br>
+                <em>International Transactions in Operational Research, 2022</em>
             </li>
             <li>
-                <strong>Dadjo, M.G., Rapaport, A., Harmand, J., Ushirobira, R., Efimov, D. (2024).</strong>
-                <em>Synthesis of optimal control under state constraints for crop fertigation</em><br>
-                <span><i>Submitted.</i></span>
-            </li>
-
-            <li>
-                <strong>Dadjo, M.G., Rapaport, A., Harmand, J., Ushirobira, R., Efimov, D. (2024).</strong>
-                <em>Practical observability and observers for nonlinear systems subject to bounded disturbances</em><br>
-                <span><i>Submitted.</i></span>
+                <strong><a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/itor.13123" target="_blank">
+                A penalty decomposition algorithm with greedy improvement for mean-reverting portfolios with sparsity and volatility constraints</a></strong> <br>
+                A. Mousavi, J. Shen <br>
+                <em>International Transactions in Operational Research, 2022</em>
             </li>
             <li>
-                <strong>Dadjo, M.G., Rapaport, A., Harmand, J., Ushirobira, R., Efimov, D. (2024).</strong>
-                <em>Minimal Water Consumption for a Crop Fertirrigation Model</em><br>
-                <span>Proceedings of the 2024 European Control Conference (ECC), Stockholm, Sweden, IEEE, pp. 2380–2385.</span><br>
-                <a href="https://ieeexplore.ieee.org/document/10591095/" target="_blank" class="btn">DOI: 10.23919/ECC64448.2024.10591095</a>
-            </li>
-            
-            <li>
-                <strong>Dadjo, M.G., Efimov, D., Harmand, J., Rapaport, A., Ushirobira, R. (2023).</strong>
-                <em>An Adaptive Observer for Time-Varying Nonlinear Systems - Application to a Crop Irrigation Model</em><br>
-                <span>Proceedings of the 2023 IEEE Conference on Decision and Control (CDC), Singapore, IEEE, pp. 7489–7494.</span><br>
-                <a href="https://ieeexplore.ieee.org/document/10384304/" target="_blank" class="btn">DOI: 10.1109/CDC49753.2023.10384304</a>
-            </li>
-
-           
-            
-
-            
-
-            
-            
-        </ul>
-    </section>
-
-    <section class="content">
-        <h2>Communications</h2>
-        <ul>
-            <li>
-                <strong>Presentation at European Control Conferences, June 2024, Stockholm, Sweden</strong>
-                
-                <em>Minimal Water Consumption for a Crop Fertirrigation Model.</em><br>
-               
-            </li>
-
-            <li>
-                <strong>Journée annuelle Gdr MOA, October 2023, Perpignan, France</strong>
-                <em>Stratégies de minimisation de la quantité d’eau sous contraintes de viabilité pour un modèle de fertirigation des cultures.</em><br>
-               
-            </li>
-
-            <li>
-                <strong>AG Réseau REUSE INRAE, October 2024, Avignon, France</strong>
-                <em>Otimization of fertirigation practice:  An approach based on viability theory and optimal control.</em><br>
-                
-            </li>
-
-            <li>
-                <strong> REUSE EUROMED 2024, Euro-Mediterranean Conference on Wastewater Reuse, October 2024, Montpellier, France</strong>
-                <em>Contribution of viability theory and constrained optimal control to fertigation.</em><br>
+                <strong><a href="https://www.sciencedirect.com/science/article/pii/S1051200421000192" target="_blank">
+                Density estimation using entropy maximization for semi-continuous Data</a></strong> <br>
+                S. Popuri, N. Neerchal, A. Mehta, A. Mousavi <br>
+                <em>Digital Signal Processing, Elsevier, 2021</em>
             </li>
             <li>
-                <strong> Seminar G-eau, December 2024, Montpellier, France</strong>
-                <em> Nitrogen optimization in agriculture-reuse.</em><br>
-            </li>
-        </ul>
-    </section>
-    <!-- Section de l'Enseignement -->
-    <section class="content">
-        <h2>Teaching</h2>
-        <ul>
-            <li>
-                <strong>2022-2023 : </strong>
-                Teaching assistant, L1 EEA - Outils mathématiques 2 à la FDS, Université de Montpellier
-                <a href="lien_vers_cours" target="_blank" class="btn">ici</a>
+                <strong><a href="https://arxiv.org/abs/2104.01331" target="_blank">
+                Sparse universum quadratic surface support vector machine models for binary classification</a></strong> <br>
+                H. Mooseai, A. Mousavi, M. Hladík, Z. Gao <br>
+                <em>arXiv preprint arXiv:2104.01331, 2021</em>
             </li>
             <li>
-                <strong>2023-2024 : </strong>
-                Teaching assistant, L2 PEIP - Calcul Différentiel et Intégral en plusieurs Variables, Polytech Montpellier à la FDS, Université de Montpellier
-                <a href="lien_vers_cours" target="_blank" class="btn">ici</a>
+                <strong><a href="https://www.aimsciences.org/article/doi/10.3934/jimo.2021017" target="_blank">
+                Quadratic surface support vector machine with L1 norm regularization</a></strong> <br>
+                A. Mousavi, Z. Gao, L. Han, A. Lim <br>
+                <em>Journal of Industrial and Management Optimization, 2022</em>
             </li>
-        </ul>
-    </section>
-
-    <section class="contact-info">
-        <p><strong>Work address :</strong><br>2 PL Viala, 34060, Montpellier, France</p>
-        <p><strong>Contact :</strong><br>Email: <a href="mailto:mahugnon.dadjo@inrae.fr">mahugnon.dadjo@inrae.fr</a></p>
-        <p><strong>LinkedIn :</strong><br><a href="https://www.linkedin.com/in/mahugnon-gildas-dadjo-014a0a168?originalSubdomain=fr" target="_blank">mahugnon-gildas-dadjo</a></p>
-    </section>
-
-        <footer>
-            <p>&copy; 2025 Mahugnon Gildas Dadjo - All rights reserved</p>
-        </footer>
+            <li>
+                <strong><a href="https://www.sciencedirect.com/science/article/abs/pii/S1877050915004348" target="_blank">
+                A survey on compressive sensing: classical results and recent advancements</a></strong> <br>
+                A. Mousavi, M. Rezaee, R. Ayanzadeh <br>
+                <em>Journal of Mathematical Modeling 8 (3), 309-344, 2020</em>
+            </li>
+            <li>
+                <strong><a href="https://arxiv.org/abs/1903.07236" target="_blank">
+                Exact support and vector recovery of constrained sparse vectors via constrained matching pursuit</a></strong> <br>
+                J. Shen, A. Mousavi <br>
+                <em>arXiv:1903.07236, 2019</em>
+            </li>
+            <li>
+                <strong><a href="https://link.springer.com/article/10.1007/s00186-019-00667-2" target="_blank">
+                Solution uniqueness of convex piecewise affine functions based optimization with applications to constrained l1 minimization</a></strong> <br>
+                A. Mousavi, J. Shen <br>
+                <em>ESAIM: Control, Optimisation and Calculus of Variations 25, 56, 2019</em>
+            </li>
+            <li>
+                <strong><a href="https://arxiv.org/abs/1901.00088" target="_blank">
+                Quantum annealing based binary compressive sensing with matrix uncertainty</a></strong> <br>
+                R. Ayanzadeh, A. Mousavi, M. Halem, T. Finin <br>
+                <em>arXiv:1901.00088, 2019</em>
+            </li>
+            <li>
+                <strong><a href="https://arxiv.org/abs/1903.07236" target="_blank">
+                Least sparsity of p-norm based optimization problems with p>1</a></strong> <br>
+                A. Mousavi <br>
+                <em>arXiv:1903.07236, 2019</em>
+            </li>
+            </ul>
     </div>
+
+    <!-- Ph.D. Thesis Section -->
+    <div id="thesis" class="section">
+        <h2>Ph.D. Thesis</h2>
+        <dl>
+            <dt><a href="https://search.proquest.com/openview/7024665526e3f8494a55f1da4be35285/1?pq-origsite=gscholar&amp;cbl=18750&amp;diss=y" target="_blank">
+                Topics in Sparse Recovery via Constrained Optimization: Least Sparsity, Solution Uniqueness, and Constrained Exact Recovery</a></dt>
+            <dd>
+                <p>A. Mousavi<br>
+                University of Maryland, Baltimore County, 2019</p>
+            </dd>
+        </dl>
+    </div>
+
+    <!-- Education Section -->
+    <div id="education" class="section">
+        <h2>Education</h2>
+        <ul>
+            <li>Ph.D., University of Maryland, BC, Applied Math. 2013-2019.</li>
+            <li>M.S., Sharif University of Technology, Applied Math. 2008-2011.</li>
+            <li>B.S., University of Guilan, Applied Math. 2004-2008.</li>
+        </ul>
+    </div>
+
+    <!-- Research Interests Section -->
+    <div id="interests" class="section">
+        <h2>Research Interests</h2>
+        <ul>
+            <li>Sparse Optimization, Machine Learning, Large Scale Optimization, Mathematical Modeling, Numerical Linear Algebra</li>
+            <li>Specific: L1-Minimization, Greedy Algorithms, Semidefinite Programming, Matrix Decomposition</li>
+        </ul>
+    </div>
+
+    <!-- Work Experience Section -->
+    <div id="experience" class="section">
+        <h2>Work Experience</h2>
+        <ul>
+            <li>Industrial Associate, Informatics Institute, Gainesville, FL, Sep. 2021-Present.</li>
+            <li>Industrial Postdoctoral Associate, Cargil, Data Science team, Minneapolis, MN, Sep. 2019-2021.</li>
+            <li>Research and Development Intern, Precima, R&D division, Chicago, IL, Summer 2019.</li>
+        </ul>
+    </div>
+
+    <!-- Computer Skills Section -->
+    <div id="skills" class="section">
+        <h2>Computer Skills</h2>
+        <ul>
+            <li>Python, MATLAB, LaTeX</li>
+        </ul>
+    </div>
+
+    <!-- Teaching Section -->
+    <div id="teaching" class="section">
+        <h2>Teaching</h2>
+        <p>Instructor at University of Maryland, Baltimore County:</p>
+        <ul>
+            <li>MATH 225: Introduction to Differential Equations, Summer and Winter 2018, and Winter 2019.</li>
+        </ul>
+        <p>Instructor at Azad University:</p>
+        <ul>
+            <li>Numerical Computations: Spring 2016.</li>
+        </ul>
+        <p>Teaching Assistant at University of Maryland, Baltimore County:</p>
+        <ul>
+            <li>MATH 152: Calculus and Analytic Geometry II, Fall 2014-Spring 2017, Summer 2017.</li>
+            <li>MATH 151: Calculus and Analytic Geometry I, Summer 2015-Fall 2018.</li>
+        </ul>
+    </div>
+
+    <!-- Selected Collaborators Section -->
+    <div id="collaborators" class="section">
+        <h2>Selected Collaborators</h2>
+        <p>(Include a list of collaborators here.)</p>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="section">
+        <h2>Contact</h2>
+        <p>
+            Feel free to reach out via email or LinkedIn: <br>
+            <a href="mailto:youremail@example.com">Email</a> | <a href="https://www.linkedin.com/in/yourprofile">LinkedIn</a>
+        </p>
+    </div>
+</div>
+
 </body>
 </html>
