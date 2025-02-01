@@ -50,17 +50,17 @@
         }
     </style>
     <script>
-       function showSection(sectionId) {
-    // Sélectionner le bloc cliqué
+     function showSection(sectionId) {
     const section = document.getElementById(sectionId);
 
-    // Vérifier si le bloc est déjà affiché
     if (section.style.display === 'block') {
         section.style.display = 'none'; // Cacher si déjà affiché
     } else {
-        section.style.display = 'block'; // Sinon, afficher
+        section.style.display = 'block'; // Afficher le bloc
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' }); // Défilement fluide
     }
 }
+
 
         
         // Display the biography section by default when the page loads
