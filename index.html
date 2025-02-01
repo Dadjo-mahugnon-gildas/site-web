@@ -50,15 +50,18 @@
         }
     </style>
     <script>
-        // Function to switch between sections
-        function showSection(sectionId) {
-            // Hide all sections
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(section => section.style.display = 'none');
+       function showSection(sectionId) {
+    // Sélectionner le bloc cliqué
+    const section = document.getElementById(sectionId);
 
-            // Show the clicked section
-            document.getElementById(sectionId).style.display = 'block';
-        }
+    // Vérifier si le bloc est déjà affiché
+    if (section.style.display === 'block') {
+        section.style.display = 'none'; // Cacher si déjà affiché
+    } else {
+        section.style.display = 'block'; // Sinon, afficher
+    }
+}
+
         
         // Display the biography section by default when the page loads
         window.onload = function() {
