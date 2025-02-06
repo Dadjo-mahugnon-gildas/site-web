@@ -1,0 +1,35 @@
+# Informations générales du site
+title: "Mahugnon Gildas Dadjo"
+description: "My personal website."
+author: "Mahugnon Gildas Dadjo"
+email: "mahugnon.dadjo@inrae.fr"
+
+# URL du site (remplace par ton URL GitHub Pages si applicable)
+baseurl: ""  # Si le site est dans un sous-répertoire, ajoute "/nom-du-repo"
+url: "https://dadjo-mahugnon-gildas.github.io/site-web/"  # Remplace par ton vrai nom d'utilisateur GitHub
+
+# Thème utilisé (ex: minima si tu utilises GitHub Pages)
+theme: minima  # Ou un autre thème Jekyll
+
+# Options pour la navigation
+permalink: pretty
+
+# Plugins (nécessaire pour certaines fonctionnalités avec GitHub Pages)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Configuration des réseaux sociaux
+social:
+  github: Mahugnon Gildas Dadjo
+ # linkedin: ton-profil-linkedin
+ # twitter: ton-twitter
+
+# Désactivation de la génération des fichiers inutiles
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
