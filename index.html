@@ -51,8 +51,44 @@
         .section {
             display: none;
         }
+        
+        /* Donne un style à la sidebar */
+.sidebar {
+  width: 200px;       /* Largeur de la zone, à adapter selon vos besoins */
+  background-color: #f0f0f0;
+  padding: 10px;
+  position: relative;
+}
+
+/* Style de l’icône (hamburger menu) */
+.menu-icon {
+  font-size: 24px;    /* Taille de l’icône */
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/* Le contenu du menu est masqué par défaut */
+.menu-content {
+  display: none;
+}
+
+/* Classe activée lorsque le menu est ouvert */
+.menu-content.open {
+  display: block; 
+}
     </style>
+    
     <script>
+        function toggleMenu() {
+          var menuContent = document.getElementById("menuContent");
+          // On ajoute/enlève la classe 'open' pour afficher ou masquer le menu
+          menuContent.classList.toggle("open");
+        }
+        </script>
+        
+      
+<script>
      function showSection(sectionId) {
     const section = document.getElementById(sectionId);
 
@@ -74,21 +110,26 @@
 </head>
 <body>
 
-<div class="sidebar">
-    <h2>Links</h2>
-    <a onclick="showSection('biography')">Biography</a>
-    <a onclick="showSection('education')">Education</a>
-    <a onclick="showSection('thesis')">Ph.D. Thesis</a>
-    <a onclick="showSection('publications')">Publications</a>
-    <a onclick="showSection('communications')">Communications</a>
-    <a onclick="showSection('interests')">Research Interests</a>
-    <a onclick="showSection('teaching')">Teaching</a>
-    <a onclick="showSection('project')">Research Projects</a>
-    <a onclick="showSection('experience')">Work Experience</a>
-    <a onclick="showSection('skills')">Computer Skills</a>
-    <!-- <a onclick="showSection('collaborators')">Selected Collaborators</a> -->
-    <a onclick="showSection('math-actu')">Math'Actu</a>
-</div>
+    <div class="sidebar">
+        <!-- Icône cliquable pour dérouler/masquer le menu -->
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        
+        <!-- Contenu du menu (initialement masqué en CSS) -->
+        <div id="menuContent" class="menu-content">
+          <a onclick="showSection('biography')">Biography</a>
+          <a onclick="showSection('education')">Education</a>
+          <a onclick="showSection('thesis')">Ph.D. Thesis</a>
+          <a onclick="showSection('publications')">Publications</a>
+          <a onclick="showSection('communications')">Communications</a>
+          <a onclick="showSection('interests')">Research Interests</a>
+          <a onclick="showSection('teaching')">Teaching</a>
+          <a onclick="showSection('project')">Research Projects</a>
+          <a onclick="showSection('experience')">Work Experience</a>
+          <a onclick="showSection('skills')">Computer Skills</a>
+          <a onclick="showSection('math-actu')">Math'Actu</a>
+        </div>
+      </div>
+      
 
 <div class="content">
     <!-- Biography Section -->
