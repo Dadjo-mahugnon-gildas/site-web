@@ -329,36 +329,6 @@ h2 {
 
 
 
-/* Pour afficher image + texte côte à côte */
-#biography .profile {
-    display: flex;
-    align-items: flex-start;  /* aligne le texte en haut de l'image */
-    gap: 20px;                /* espace entre image et texte */
-    margin-bottom: 30px;      /* espace sous la section */
-}
 
-#biography .profile img {
-    width: 200px;             /* taille fixe de l'image */
-    height: auto;
-    border-radius: 10px;
-    flex-shrink: 0;           /* empêche l'image de rétrécir */
-}
-
-#biography .profile div {
-    max-width: 600px;         /* limite la largeur du texte */
-}
-
-/* Ajustement titre et paragraphe pour la bio */
-#biography h1 {
-    font-size: 2.5rem;
-    margin-top: 0;
-    margin-bottom: 10px;
-    color: #007BFF;
-}
-
-#biography p {
-    font-size: 1.125rem;
-    line-height: 1.5;
-}
 
 
