@@ -1,33 +1,13 @@
 /* Reset et styles globaux */
 body {
     font-family: Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
     color: #333;
 }
 
-h1 {
-    color: #007BFF;
-    font-size: 32px;
-}
-
-h2 {
-    color: #444;
-    font-size: 28px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    text-align: left;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    border-bottom: 3px solid #007BFF;
-    padding-bottom: 5px;
-}
-
-/* NAVBAR */
+/* Barre de navigation */
 nav {
     background-color: #333;
     padding: 10px 0;
@@ -63,27 +43,45 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-/* CONTAINERS */
+/* Conteneur principal */
 .container {
-    max-width: 900px;
-    margin: 80px auto 20px;
+    max-width: 1200px;
+    margin: 80px auto 20px; /* Ajout d'une marge en haut pour éviter que le contenu soit caché sous la navbar */
     padding: 20px;
-    text-align: left;
 }
 
+/* Contenu principal */
 .content {
-    max-width: 800px;
-    margin-left: 0;  /* serrer à gauche */
-    padding: 20px 0;
+    display: block; /* Supprime tout effet de colonne */
+    margin: 0 auto; /* Centre le contenu */
+    padding: 20px;
 }
 
-/* TITRES et PARAGRAPHES */
+/* Enlever toute bordure gauche éventuelle sur les sections */
+section {
+    border-left: none !important;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+/* Style des titres */
+h1 {
+    color: #007BFF;
+    font-size: 32px;
+}
+
+h2 {
+    color: #444;
+    font-size: 28px;
+}
+
+/* Style des paragraphes */
 p {
     font-size: 18px;
-    color: #555;
+    line-height: 1.6;
 }
 
-/* IMAGES */
+/* Image de présentation */
 img {
     max-width: 100%;
     height: auto;
@@ -91,35 +89,15 @@ img {
     margin: 20px auto;
 }
 
-/* HERO */
-.hero {
-    text-align: left;
-    padding: 20px;
-    margin: 20px 0;
+/* Pied de page */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
 }
 
-.hero img {
-    width: 90px;
-    height: 120px;
-    border-radius: 30%;
-    object-fit: cover;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.hero h2 {
-    font-size: 2rem;
-    margin-top: 10px;
-}
-
-/* SECTION */
-.section {
-    margin-bottom: 40px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #ccc;
-}
-
-/* PROJECT GRID */
 .project-grid {
     display: flex;
     gap: 20px;
@@ -131,7 +109,7 @@ img {
     background: white;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     width: 250px;
     text-align: center;
     transition: transform 0.3s;
@@ -141,55 +119,104 @@ img {
     transform: scale(1.05);
 }
 
-/* LISTES */
-ul {
-    padding-left: 20px;
-    list-style: none;
+.hero {
+    text-align: center; /* Centrer le texte et l'image */
+    padding: 20px;
 }
 
-li {
-    margin-bottom: 15px;
-    font-size: 1.2rem;
+.hero img {
+    max-width: 30%; /* Ajuster la largeur de l'image selon vos besoins */
+    height: auto; /* Garder les proportions de l'image */
+    display: block; /* Pour que l'image soit un bloc */
+    margin: 0 auto; /* Centrer l'image horizontalement */
 }
 
-/* BOUTONS */
-.btn, a.btn {
+.hero img {
+    width: 90px;  /* Ajustez la taille de l'image si nécessaire */
+    height: 120px; /* Assurez-vous que la largeur et la hauteur soient égales */
+    border-radius: 30%; /* Cela crée l'effet de cercle */
+    object-fit: cover; /* Assure que l'image s'adapte bien au cercle */
+}
+
+/* Ajoutez ces styles à votre fichier CSS */
+.presentations h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: left; /* Aligner à gauche */
+    word-wrap: break-word;
+}
+
+.presentations ul {
+    list-style: none;  
+    padding: 0;
+}
+
+.presentations li {
+    margin-bottom: 15px; 
+}
+
+.presentations a.btn {
     display: inline-block;
-    padding: 10px 15px;
-    background-color: #007BFF;
+    padding: 8px 16px;
+    background-color: #007BFF; 
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s;
-    margin-top: 5px;
 }
 
-.btn:hover, a.btn:hover {
-    background-color: #0056b3;
+.presentations a.btn:hover {
+    background-color: #0056b3; 
 }
 
-/* PRESENTATIONS + PUBLICATIONS */
-.presentations, .publications {
-    padding: 10px 0;
-}
-
-.presentations h2, .publications h2 {
+/* Ajoutez ces styles pour assurer l'uniformité entre les sections Publications et Presentations */
+section h2 {
     font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: left; /* Aligner à gauche pour les deux sections */
+    word-wrap: break-word;
 }
 
-/* MATH ACTU */
-.math-actu {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: left;
+section ul {
+    list-style: none;  
+    padding: 0;
+}
+
+section li {
+    margin-bottom: 15px; 
+    font-size: 1.2rem; /* Taille de texte uniforme pour les deux sections */
+}
+
+section a.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007BFF; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 5px; /* Espace entre le texte et le bouton */
+}
+
+section a.btn:hover {
+    background-color: #0056b3; 
+}
+
+.presentations ul li {
+    margin-bottom: 15px;
+}
+
+.math-actu h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: left; /* Aligner à gauche */
+    border-bottom: 3px solid #007BFF; /* Ligne de séparation sous le titre */
+    padding-bottom: 5px;
 }
 
 .article {
-    background: #f9f9f9;
+    background: #f9f9f9; /* Couleur de fond pour chaque article */
     padding: 15px;
     margin-bottom: 15px;
-    border-left: 5px solid #007BFF;
+    border-left: 5px solid #007BFF; /* Bordure colorée pour bien différencier */
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -215,12 +242,61 @@ li {
     text-decoration: underline;
 }
 
-/* PROFILE */
-.profile {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    margin-bottom: 20px;
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.math-actu {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;  /* Ajoute de l'espace autour du contenu */
+}
+
+.math-actu h2 {
+    margin: 0;  /* Supprime toute marge indésirable autour du titre */
+    padding: 0;  /* Supprime tout padding autour du titre */
+    white-space: nowrap;  /* Empêche le retour à la ligne du texte */
+}
+
+.math-actu h2 {
+    overflow: hidden;  /* Cache tout texte qui dépasse du conteneur */
+    text-overflow: ellipsis;  /* Utilise des points de suspension pour indiquer qu'il y a plus de texte */
+    white-space: nowrap;  /* Empêche le retour à la ligne du texte */
+}
+
+.hero {
+    text-align: center; /* Centrer le contenu */
+    margin: 20px 0;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+.section {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.edu-item {
+    margin-bottom: 30px;
+}
+
+ul {
+    padding-left: 20px;
 }
 
 .profile img {
@@ -233,7 +309,20 @@ li {
     max-width: 600px;
 }
 
-/* EDUCATION */
-.edu-item {
-    margin-bottom: 30px;
+.content {
+    max-width: 900px;
+    margin: 0 auto;
 }
+
+
+body {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+h2 {
+    margin-top: 40px;
+}
+
+
+
