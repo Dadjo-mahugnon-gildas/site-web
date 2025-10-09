@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Dadjo Mahugnon Gildas</title>
+    <link rel="stylesheet" href="jemdoc.css">
+     <script type="text/javascript" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #f0f0f0;
+            padding: 20px;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+            flex: 1;
+        }
+        .sidebar a {
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            color: #0073e6;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #003399;
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .profile img {
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+        /* Hide sections initially */
+        .section {
+    display: block;
+}
+
+        
+        /* Donne un style à la sidebar */
+.sidebar {
+  width: 200px;       /* Largeur de la zone, à adapter selon vos besoins */
+  background-color: #f0f0f0;
+  padding: 10px;
+  position: relative;
+}
+
+/* Style de l’icône (hamburger menu) */
+.menu-icon {
+  font-size: 24px;    /* Taille de l’icône */
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/* Le contenu du menu est masqué par défaut */
+.menu-content {
+  display: none;
+}
+
+/* Classe activée lorsque le menu est ouvert */
+.menu-content.open {
+  display: block; 
+}
+    </style>
+    
+    <script>
+        function toggleMenu() {
+          var menuContent = document.getElementById("menuContent");
+          // On ajoute/enlève la classe 'open' pour afficher ou masquer le menu
+          menuContent.classList.toggle("open");
+        }
+        </script>
+        
+      
+<script>
+     function showSection(sectionId) {
+    const section = document.getElementById(sectionId);
+
+    if (section.style.display === 'block') {
+        section.style.display = 'none'; // Cacher si déjà affiché
+    } else {
+        section.style.display = 'block'; // Afficher le bloc
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' }); // Défilement fluide
+    }
+}
+
+
+        
+        // Display the biography section by default when the page loads
+        window.onload = function() {
+            showSection('biography');
+        };
+    </script>
+</head>
+<body>
+
+    <div class="sidebar">
+        <!-- Icône cliquable pour dérouler/masquer le menu -->
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        
+        <!-- Contenu du menu (initialement masqué en CSS) -->
+        <div id="menuContent" class="menu-content">
+          <a onclick="showSection('biography')">Biography</a>
+          <a onclick="showSection('education')">Education</a>
+          <a onclick="showSection('thesis')">Ph.D. Thesis</a>
+          <a onclick="showSection('publications')">Publications</a>
+          <a onclick="showSection('communications')">Communications</a>
+          <a onclick="showSection('interests')">Research Interests</a>
+          <a onclick="showSection('teaching')">Teaching</a>
+          <a onclick="showSection('project')">Research Projects</a>
+          <a onclick="showSection('experience')">Work Experience</a>
+          <a onclick="showSection('skills')">Computer Skills</a>
+          <a onclick="showSection('math-actu')">Math'Actu</a>
+        </div>
+      </div>
+      
+
+<div class="content">
+    
+ <!-- Biography Section -->
+ <div id="biography" class="section">
+    <div class="profile">
+        <img src="images/im5.jpg" alt="Photo de Mahugnon" width="200px" />
+        <div>
+            <h1> Dadjo Mahugnon Gildas</h1>
+            <p>
+                Ph.D. candidate in Applied Mathematics, Université de Montpellier, France. <br>
+                Advisors: 
+                <a href="https://sites.google.com/site/alainrapaport" target="_blank">Alain Rapaport</a>, 
+                <a href="https://chercheurs.lille.inria.fr/~efimov/" target="_blank">Denis Efimov</a>, 
+                <a href="https://chercheurs.lille.inria.fr/~ushirobira/" target="_blank">Rosane Ushirobira</a> and 
+                <a href="https://sites.google.com/site/pagewebharmandjerome/" target="_blank">Jérôme Harmand</a>. <br>
+                 <a href="https://scholar.google.com/citations?user=HISSGTUAAAAJ&hl=fr">Google Scholar</a>, <a href="mahugnon_CV.pdf">Curriculum Vitae</a> <br>
+                Contact: <a href="mailto:mahugnon.dadjo@inrae.fr">email</a>, <a href="https://www.linkedin.com/in/mahugnon-gildas-dadjo-014a0a168/?originalSubdomain=fr">LinkedIn</a>
+            </p>
+        </div>
+    </div>
+    <!-- Ph.D. Thesis Section -->
+    <div id="thesis" class="section">
+        <h2>Ph.D. Thesis</h2>
+        <dl>
+            <dt><a href="https://theses.fr/s350874" target="_blank">
+                Estimation and control for a system of interconnected bioreactors for the reuse of treated wastewater in agriculture</a></dt>
+            <dd>
+                <p> <br>
+                    I started my Ph.D degree in September 2022. My work aims to develop control methods to pilot an original system of 
+                    three interconnected bioreactors to reuse wastewater in agriculture. More particularly, it is a problem called 
+                    "setpoint tracking", such "setpoint" being the result of the  resolution of an optimal control problem solved using 
+                    a crop irrigation model. However, optimal solutions should be expressed as feedback that depends on the nitrogen in 
+                    the soil, which a priori is not available. Another difficulty is related to the various uncertainties in the model 
+                    parameters. We propose to bring concrete answers to these challenges by designing the so-called "adaptive observer" 
+                    for the joint estimation of nitrogen and uncertain parameters.</p>
+            </dd>
+        </dl>
+    </div>
+
+    <!-- Education Section -->
+<div id="education" class="section">
+    <h2>Education</h2>
+
+    <div class="edu-item">
+        <h3>Master’s degree in Mathematics and Applications</h3>
+        <p><strong>August 2022</strong> — Sorbonne Université (Paris VI)</p>
+        <ul>
+            <li><strong>Track:</strong> Mathematical Modeling, specialization in Control, Optimization, and Calculus of Variations</li>
+            <li><strong>Period:</strong> September 2021 – August 2022</li>
+            <li><strong>Internship title:</strong> <em>Data-based Model of the Visual Cortex</em></li>
+            <li><strong>Supervisor:</strong> Dario Prandi</li>
+            <li><strong>Institution:</strong> Laboratoire des Signaux et Systèmes, CentraleSupélec</li>
+        </ul>
+    </div>
+
+    <div class="edu-item">
+        <h3>Master’s degree in Fundamental Mathematics and Applications</h3>
+        <p><strong>August 2020</strong> — IMSP, Benin</p>
+        <ul>
+            <li><strong>Specialization:</strong> Analysis and Geometry</li>
+            <li><strong>Period:</strong> September 2019 – August 2020</li>
+            <li><strong>Internship title:</strong> <em>Representation of Hom-Lie Algebras and Applications</em></li>
+            <li><strong>Supervisors:</strong> Kangni Kinvi and Attan Sylvain</li>
+            <li><strong>Institution:</strong> Laboratory of Mathematics and Physics, IMSP</li>
+        </ul>
+        <h4>Master 1 in Fundamental Mathematics and Applications</h4>
+        <p><strong>September 2018 – August 2019</strong> — IMSP, Benin</p>
+        <ul>
+            <li><strong>Specialization:</strong> Analysis and Algebra</li>
+        </ul>
+    </div>
+
+    <div class="edu-item">
+        <h3>Bachelor’s degree in Fundamental Mathematics and Applications</h3>
+        <p><strong>August 2017</strong> — Université d'Abomey-Calavi (Benin)</p>
+    </div>
+</div>
+
+    
+    <!-- Publications Section -->
+<div id="publications" class="section">
+    <h2>Publications</h2>
+    <ul>
+      <li>
+        <strong>Dadjo, M.G., Rapaport, A., Harmand, J., Ushirobira, R., Efimov, D. (2025).</strong><br>
+        <em>Synthesis of Optimal Control Under State Constraints for Crop Fertigation.</em><br>
+        <span><i>Journal of Optimization Theory and Applications,</i> 207(1):2.</span><br>
+        <a href="https://doi.org/10.1007/s10957-025-02754-w" target="_blank" class="btn">
+          DOI: 10.1007/s10957-025-02754-w
+        </a>
+      </li>
+  
+      <li>
+        <strong>Dadjo, M.G., Rapaport, A., Harmand, J., Ushirobira, R., Efimov, D. (2025).</strong><br>
+        <em>A Robust Adaptive Observer for a Class of Nonlinear Time-Varying Systems with Application to a Crop Fertigation Model.</em><br>
+        <span><i>International Journal of Control</i>, in press.</span><br>
+        <a href="https://doi.org/10.1080/00207179.2025.2518178" target="_blank" class="btn">
+          DOI: 10.1080/00207179.2025.2518178
+        </a>
+      </li>
+  
+      <li>
+        <strong>Dadjo, M.G., Rapaport, A., Ushirobira, R., Efimov, D., Harmand, J. (2025).</strong><br>
+        <em>Practical Observability and Observers for Nonlinear Systems Subject to Bounded Disturbances.</em><br>
+        <span>Proceedings of the <i>European Control Conference (ECC 2025)</i>, Thessaloniki, Greece.</span><br>
+        <a href="https://hal.inrae.fr/hal-05086518" target="_blank" class="btn">
+          HAL: hal-05086518
+        </a> –
+        <a href="https://hal.inrae.fr/hal-05086518v1/file/ECC2025.pdf" target="_blank" class="btn">
+          PDF
+        </a>
+      </li>
+  
+      <li>
+        <strong>Dadjo, M.G., Rapaport, A., Harmand, J., Ushirobira, R., Efimov, D. (2024).</strong><br>
+        <em>Minimal Water Consumption for a Crop Fertirrigation Model.</em><br>
+        <span>Proceedings of the <i>European Control Conference (ECC 2024)</i>, Stockholm, Sweden, IEEE, pp. 2380–2385.</span><br>
+        <a href="https://ieeexplore.ieee.org/document/10591095/" target="_blank" class="btn">
+          DOI: 10.23919/ECC64448.2024.10591095
+        </a>
+      </li>
+  
+      <li>
+        <strong>Dadjo, M.G., Efimov, D., Harmand, J., Rapaport, A., Ushirobira, R. (2023).</strong><br>
+        <em>An Adaptive Observer for Time-Varying Nonlinear Systems – Application to a Crop Irrigation Model.</em><br>
+        <span>Proceedings of the <i>IEEE Conference on Decision and Control (CDC 2023)</i>, Singapore, IEEE, pp. 7489–7494.</span><br>
+        <a href="https://ieeexplore.ieee.org/document/10384304/" target="_blank" class="btn">
+          DOI: 10.1109/CDC49753.2023.10384304
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+      <div id="communications" class="section">
+        <h2>Communications</h2>
+        <ul>
+            <li>
+                <strong>Presentation at European Control Conferences, June 2024, Stockholm, Sweden</strong>
+                
+                <em>Minimal Water Consumption for a Crop Fertirrigation Model.</em><br>
+               
+            </li>
+            <li>
+                <strong> REUSE EUROMED 2024, Euro-Mediterranean Conference on Wastewater Reuse, October 2024, Montpellier, France</strong>
+                <em>Contribution of viability theory and constrained optimal control to fertigation.</em><br>
+                <a href="https://drive.google.com/file/d/17_xz3dDZzjSQRbbrmTvE2cbqKAqzhu2B/view" target="_blank" class="btn">PDF</a>
+                <a href="https://drive.google.com/file/d/1J05VRcD2svaco4p9aVzo4uJorYkIcQov/view?usp=sharing" target="_blank" class="btn">DIASPORAMA</a>
+            <li>
+                <strong>Journée annuelle Gdr MOA, October 2023, Perpignan, France</strong>
+                <em>Stratégies de minimisation de la quantité d’eau sous contraintes de viabilité pour un modèle de fertirigation des cultures.</em><br>
+               
+            </li>
+
+            <li>
+                <strong>AG Réseau REUSE INRAE, October 2024, Avignon, France</strong>
+                <em>Otimization of fertirigation practice:  An approach based on viability theory and optimal control.</em><br>
+                <a href="https://drive.google.com/file/d/1Ay1sLUoBboRH6vV9dsSOPoNGOwmy8x83/view?usp=drive_link"target="_blank" class="btn">PDF</a>
+            </li>
+
+            
+            <li>
+                <strong> Seminar G-eau, December 2024, Montpellier, France</strong>
+                <em> Nitrogen optimization in agriculture-reuse.</em><br>
+            </li>
+        </ul>
+        </div>
+
+    <!-- Research Interests Section -->
+    <div id="interests" class="section">
+        <h2>Research Interests</h2>
+        <ul>
+            <li>Control Systems, Optimal Control, Optimization, Mathematical Modeling, Estimation (states and parameters)</li>
+            <li>Specific: Pontryagin Maximum Principle (PMP) and Applications, Observers design for nonlinear systems, ISS-stability, Linear Matrix Inequality (LMI)</li>
+        </ul>
+    </div>
+
+    <!-- Teaching Section -->
+    <div id="teaching" class="section">
+        <h2>Teaching</h2>
+        
+         <h3>HA8401H - Differential Calculus and Multivariable Integration</h3>
+  <p><strong>2nd Year B.Sc, Polytech Montpellier Engineering School, 2024</strong></p>
+  
+  <h4>Documents</h4>
+  <ul>
+    <li><a href="https://drive.google.com/file/d/1U-NlfgxxfTO0gE5z0ycJH_JbDZtV9DAT/view?usp=sharing">Course Notes</a></li>
+    <li><a href="https://drive.google.com/file/d/1IVJjrRJl0ZbGF-zs0HjNU49hgnjaW2iE/view?usp=sharing">TD1 - Introduction and Basic Concepts (Worksheet)</a></li>
+    <li><a href="https://drive.google.com/file/d/1WLWmJMqiKy60nzyk44CTmiSpPwy54UYk/view?usp=sharing">TD2 - Parametric Curves (Worksheet)</a></li>
+    <li><a href="https://drive.google.com/file/d/1MQdtl25-bYJSmWhaQ-DQPkoerSIoNr79/view?usp=sharing">TD3 - Geometry and Topology in \(\mathbb{R}^n\) (Worksheet )</a></li>
+    <li><a href="https://drive.google.com/file/d/1xvGj4hYE_1P46O8PayyELC6fXUNGDMHA/view?usp=sharing">TD4 - Differential Calculus (Worksheet)</a></li>
+    <li><a href="https://drive.google.com/file/d/1ox36PaGj64VUX77XqDMan8QJsw0t1xez/view?usp=sharing">TD5 - Multiple Integrals (Worksheet)</a></li>
+  </ul>
+  
+ 
+  <h4>Course Content</h4>
+  <h5>1) Introduction and Basic Concepts</h5>
+  <p>Introduction to multivariable functions: definitions, examples, graphs, level sets, partial functions, vector functions, and parametric curves.</p>
+
+  <h5>2) Parametric Curves</h5>
+  <p>Analysis of vector functions with a single variable, parametric curves, length, curvature, analysis of parametric arcs.</p>
+
+  <h5>3) Geometry and Topology in \(\mathbb{R}^n\)</h5>
+  <p>Norms and distances, limits of sequences and functions, continuity, elementary topology, scalar product, and Euclidean norm.</p>
+
+  <h5>4) Differential Calculus in \(\mathbb{R}^n\)</h5>
+  <p>Differentiability, partial derivatives, gradient vector, Jacobian matrix, \(\mathcal{C}^1\) functions, higher-order derivatives, Taylor series, Hessian matrix.</p>
+
+  <h5>5) Multiple Integrals</h5>
+  <p>Review of single integrals, double and triple integrals, change of variables formula, circulation of vector fields.</p>
+
+  <p><strong>Responsable: Philippe Castillon</strong></p>
+
+  <h3>HAS202X - Mathematical Tools III</h3>
+  <p><strong>First Year B.Sc, PCSI - Physics, Chemistry, and Engineering Sciences, 2022-2023 and 2023-2024</strong></p>
+  
+  <h4>Documents</h4>
+  <ul>
+    <li><a href="https://drive.google.com/file/d/1SBYtgfrkQFAnImCkWeM3C6L5Ll8M1fzP/view?usp=sharing">Course Notes</a></li>
+    <li><a href="https://drive.google.com/file/d/1TEbyFNUj3BRBZN2-OMIGpr5Cy117157T/view?usp=sharing"> Exam 2024</a></li>
+    <li><a href="https://drive.google.com/file/d/1IU6Wb7qxeRTQtnAuOL3Ax-4OK8mUaThP/view?usp=sharing">TD2  (Worksheet)</a></li>
+  </ul>
+  
+ 
+  <h4>Course Content</h4>
+  <h5>1) Matrices</h5>
+
+  
+    <p>
+        
+     Sum and Outer Product, Transposition, Matrix Product, Mixed Properties, Matrix Power, Trace.
+    </p>
+
+  <h5>2) The Spaces \( \mathbb{R}^n \) and \( \mathbb{C}^n \)</h5>
+    <p>
+         Geometric Interpretations,
+         \( \mathbb{R}^2 \) and the Usual Euclidean Plane,
+         Matrix Product and Dot Product,
+         Matrix Product and Cross Product,
+         Notion of Vector Subspace,
+         Generated Subspace,
+         List of Vector Subspaces of \( \mathbb{R}^n \) for \( n = 1, 2, 3 \),
+        Notion of Affine Subspace.
+    </p>
+
+ <h5>3) Linear Systems</h5>
+    <p>
+        
+         Systems, Vector Subspaces, and Affine Subspaces,
+         Gaussian Elimination Algorithm,
+         Solution Space - Summary of the Resolution Method,
+         Special Case of a Homogeneous System.
+    </p>
+
+    <h5>4) Invertibility and Determinant</h5>
+    <p>
+     Invertible Matrices, Determinants, Practical Calculation of the Inverse.
+    </p>
+    
+    <h5>5) Bases and Linear Mapping</h5>
+    <p>
+        Bases of \(\mathbb{R}^n\), Change of Basis, Operations on Linear Mappings, Matrices and Linear Mappings, Matrix Representation of a Linear Mapping in a Basis.
+    </p>
+ 
+    <h5>6) Diagonalization</h5>
+    <p>
+        Eigenvalues, Characteristic Polynomial, Computing Eigenvectors, Eigenvalues and Linear Mappings.
+    </p>
+
+    <h5>7) Equations and First-Order Linear Differential Systems</h5>
+    <p>
+        First-Order Linear Differential Equations, First-Order Linear Differential Systems with Constant Coefficients, Curves in \(\mathbb{R}^n\).
+    </p>
+
+    <p><strong>Responsable: Laurent Guieu</strong></p>
+    </div>
+
+       <!-- project Section -->
+    <div id="project" class="section">
+        <h2>Research Projects</h2>
+        <ul>
+            <li>Co-leader of the BOUM SMAI Project for Young Researchers, (with Anas Bouali and Ruben Chenevat).  Organization of a conference day on Optimization, Modeling, and Controlat INRAE Occitanie-Montpellier (upcoming in 2025)BOUge tes Math ́ematiques (BOUM) – a project funded by the French Society of Applied andIndustrial Mathematics (SMAI) and partially supported by Inria.Objective:  To  foster  networking,  collaboration,  and  dynamism  among  young  researchers  inApplied Mathematics through organizing conferences, workshops, and research-oriented activ-ities.</li>
+        </ul>
+    </div>
+
+
+    <!-- Work Experience Section -->
+    <div id="experience" class="section">
+        <h2>Work Experience</h2>
+        <ul>
+            <li>Research internship, L2S CentraleSupélec, Gif-sur-Yvette, May-September. 2021.</li>
+            <li>Ph.D. Research, INRAE, MISTEA team, Montpellier, September. 2022-present.</li>
+            <li>Ph.D. Research, Inria, VALSE team, Lille, September. 2022-present.</li>
+        </ul>
+    </div>
+
+    <!-- Computer Skills Section -->
+    <div id="skills" class="section">
+        <h2>Computer Skills</h2>
+        <ul>
+            <li>SCILAB, MATLAB, Julia controltoolbox, LaTeX</li>
+        </ul>
+    </div>
+
+   
+
+    <!-- Selected Collaborators Section -->
+    
+
+    <!-- Contact Section -->
+    <div id="math-actu" class="section">
+        <h2>Math'Actu</h2>
+        <p>Bienvenue sur <strong>Math'Actu</strong>, votre source d’actualités en mathématiques appliquées ! Retrouvez ici les dernières avancées, événements, publications et découvertes en mathématiques appliquées.</p>
+
+        <p>
+            Nous organisons une journée entre jeunes chercheurs comme l'indique l'affiche ci-dessous. <br>
+            <!-- Insertion du GIF -->
+        <img src="images/Blue White Modern Coming Soon Poster Landscape.gif" 
+        alt="Coming Soon Poster" 
+        style="max-width: 70%; height: auto;" />
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
