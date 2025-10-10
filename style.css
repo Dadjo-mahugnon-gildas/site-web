@@ -78,3 +78,23 @@ span.highlight {
     display: inline-block;
     border-radius: 10px;
 }
+
+
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* espace entre la photo et le texte */
+  margin-bottom: 30px;
+}
+
+.profile-pic {
+  width: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-text {
+  flex: 1;
+}
+
